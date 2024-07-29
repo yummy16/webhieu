@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+/* General*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html,body{
+    width:100vw;
+    height:100vh;
+    background: #201f1f;
+}
+/* Navigateur*/
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Centre le contenu horizontalement */
+    align-items: center;     /* Centre le contenu verticalement */
+    padding: 1em;
+    z-index: 3; /* Assurez-vous que le nav est au-dessus de .hero */
+}
+/*Hieu Nguyen*/
+.entete {
+    text-align: left;
+    font-size: 1.2em; 
+}
+.entete a {
+    text-decoration: none; /* Supprime la décoration (soulignement) des liens à l'intérieur de .entete */
+    color: rgb(255, 255, 255); /* Assure que les liens sont aussi blancs */
+}
+nav ul, .header{
+
+    overflow:fixed;
+
+}
+/*Liste contact*/
+nav ul {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0; /* Supprime le padding par défaut du ul */
+    gap: 2em; /* Espacement entre les éléments de la liste */
+    margin: 0; /* Supprime la marge par défaut du ul */
+}
+nav ul li {
+    list-style: none;
+    font-size: 1.2em;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin-right: 1em; /* Marge à droite */
+    margin-left: -0.5em; /* Décale légèrement à gauche */
+}
+nav ul li a {
+    text-decoration: none; /* Supprime la décoration des liens */
+    color: rgb(255, 255, 255); /* Assure que la couleur du texte des liens est blanche */
+    font-weight: 400; /* Assure que le poids de la police des liens est correct */
+    transition: color 0.3s; /* Ajoute une transition douce pour le changement de couleur */
+}
+/*effet souris liste*/
+nav ul li a:hover {
+    color: #000000; /* Couleur du texte au survol */
+}
+/* HIEU NGUYEN MILIEU*/
+.header {
+    position: fixed; /* Utilisez position:fixed pour le fixer à l'écran */
+    top: 50%; /* Ajustez selon vos besoins */
+    left: 50%; /* Ajustez selon vos besoins */
+    transform: translate(-50%, -50%); /* Centre le texte */
+    color: rgb(0, 0, 0); /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    width: 100%;
+    z-index: 1; /* Assurez-vous que .header est au-dessus de .hero */
+}
+.h1{
+    color:#ffffff;
+
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-color: currentColor;
+        -webkit-text-stroke-width: .012em;
+
+            font-size: 6.0rem;
+            margin: 0.05em 0;
+}
+.h1 span{
+    -webkit-text-fill-color: currentColor;
+}
+.header{
+    overflow:fixed;
+    position: absolute;
+}
+
+/* image*/
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(25, 25, 25, 0.166); /* Semi-transparent black overlay */
+    pointer-events: none; /* Allow clicks to pass through */
+    z-index: 1; /* Ensure it's above the image but below other content */
+}
+
+/* RESPONSIBLE DESIGN LISTE CACHE*/
+.checkbtn{
+    display:none;
+}
+
+/* Center Box (General) */
+.center-box {
+    position: absolute;
+    bottom: 30%; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+/* Couleur de fond du bouton */
+.portfolio-link {
+  
+    color: rgba(255, 255, 255, 0.866);              /* Couleur du texte du bouton */
+    padding: 10px 20px;        /* Espacement interne du bouton */
+    text-decoration: none;     /* Supprime la décoration du texte */
+    font-size: 1em;          /* Taille du texte du bouton */
+    border-radius: 3.5px;       /* Coins arrondis du bouton */
+    border: 2px solid rgba(255, 255, 255, 0.399); 
+    transition: background-color 0.3s, transform 0.3s; /* Effet de transition pour le survol */
+    display: inline-block;    /* Assure que les dimensions du bouton s'ajustent correctement */
+}
+/* effet souris bouton portfolio*/
+.portfolio-link:hover {
+    background-color: #0000006a; /* Couleur de fond du bouton au survol */
+    transform: scale(1.05);    /* Agrandit légèrement le bouton au survol */
+}
+.container {
+    position: relative; /* This allows absolutely positioned children to be positioned relative to this container */
+}
+/* BARRE NAV */
+@media screen and (max-width:600px){
+    nav ul li {
+        list-style: none;
+        font-size: 0.9em;
+        font-optical-sizing: auto;
+        font-weight: 1px;
+        font-style: normal;
+    }
+}
+/* BARRE NAV TRANSITION*/
+@media screen and (max-width:420px){
+    nav ul {
+        list-style: none;
+        font-size: 0.75em;
+        font-optical-sizing: auto;
+        font-weight: 1px;
+        font-style: normal;
+        text-align: center;
+        
+    }
+    .entete{
+        width:10%;
+    }
+
+}
+/* BARRE NAV TELEPHONE*/
+@media screen and (max-width:435px){
+    nav ul {
+        justify-content: center;
+        margin:4px;
+        width:100%;
+    }
+    .entete{
+        display: none;
+    }
+}
+
+/* Responsible DESIGN PHOTO */
+@media screen and (max-width:320px){
+
+    .container{
+        text-align: center;
+    }
+    .hero {
+
+        width: 100%;
+        height:100%;
+        max-width: 100%; 
+        margin: 0 auto; 
+    }
+    .hero img {
+        display:block;
+        width: 100%;
+        height: auto;
+    }
+/* RESPONSIVE DESIGN TITRE HIEU NGUYEN*/
+
+    .header{
+        display:flex;
+        flex-direction: column;
+        position: relative;
+        padding-bottom: 80px;
+        z-index: 1;
+    }
+    .h1{
+        display:inline-block;
+    }
+
+    .portfolio-link {
+  
+        border-radius: 3.5px;     
+        border: 1px solid rgba(255, 255, 255, 0.399); 
+    }
+
+}
+/*TITRE*/
+
+
+/* About */
+.about {
+ 
+    padding: 50px;
+    color: #ffffffd2; 
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+}
+
+.about-intro{
+   color:white;
+   text-align:center;
+   margin-top: 30px;
+}
+
+.about-text, p{
+    text-align: justify;
+}
+
+
+span {
+    line-height:40px;
+    letter-spacing: 0.8px;
+    font-weight: 300;
+    font-style: italic;
+    color: #ffffffd0;
+}
+
+.about-img{
+
+    grid-column-start: 1;
+    width:80%;
+    max-width:350px;
+    justify-self: center;
+
+}
+@media(max-width:750px){
+    .about{
+        grid-template-columns: 1fr;
+        text-align:center;
+    }
+    .about h2{
+        grid-column: span 1;
+    }
+    .about-text,p{
+        margin-top: 30px;
+    }
+}
+
+.information{
+ 
+    margin-top: 15px;
+    
+}
+.CV-links, button{
+    color:rgba(255, 255, 255, 0.785);
+    background-color: #343333e0;
+    margin-top: 10px;;
+    padding:10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    
+}
+button:hover{
+    color:rgb(255, 255, 255);
+    background-color: #9f9f9f6a;
+}
+h3{
+    color:white; 
+    text-align: center;
+    font-size: larger;
+}
+h4{
+    color:white;
+    text-align: center;
+}
+h5{
+    color: white;
+    text-align: center;
+
+}

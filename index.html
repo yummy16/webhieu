@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hieu Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <!--
+        ---COMPTEUR----
+        <h1 class="conter">0</h1>
+
+        <div class="overlay">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        -->
+    <!---Responsive design -->
+
+    <input type="checkbox" id="check" class="checkbtn">
+    <label for="check" class="checkbtn">
+        <div class="lignes">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </div>
+    </label>
+
+    <!----CONTAINER---->
+    <div class="container">
+        <nav>
+               <!---Hieu Nguyen entete-->
+            <div class="entete">
+                <a href="#"> Hieu Nguyen</a>
+            </div>
+
+            <ul>
+                <li><a href="#service">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+        
+        <!---Hieu NGUYEN -->
+        <div class="header">
+            <div class="h1">Hieu <span>Nguyen</span></div>
+        </div>
+
+        <!---IMAGE -->
+        <div class="hero">
+            <img src="nuage.jpg" alt="nuage"/>
+            <div class="overlay"></div> <!-- Brouillard noir -->
+        </div>
+
+        <!--BOUTON PORTFOLIO-->
+        <section>
+            <div class="center-box">
+                <a class="portfolio-link" href="https://drive.google.com/file/d/1Ul7rmfm_bpZ5PxPy2Dt7Cfivd0I6JYi1/view">
+                Portfolio </a>
+            </div>
+        </section>
+    </div>
+
+     <!--PAGE ABOUT-->
+
+     <div class="about-intro">
+        <h2>About</h2>
+        <span>Introduction</span>
+    </div>
+    
+    <section class="about" id="service">
+
+            <div class="about-image">
+                <img src="test.jpg" alt="test" class="about-img">
+            </div>
+
+            <div article="about-text">
+                <p> Etudiante en 3ème année de licence double-diplôme droit et informatique avec 
+                    un renforcement info parcourt CILS (Conception et intelligence
+                    des lociciels et des systèmes), je suis à la recherche d'un stage en informatique pour une durée de 2 à 3 mois avec 
+                    un penchant vers le web développement ou vers l'intelligence artificielle.
+                </p>
+                
+                <div class="information">
+
+                    <div article="info-box">
+                        <i class="bx bxs-user"></i>
+                        <span> Hieu Nguyen</span>
+                    </div>
+        
+                    <div article="bx bxs-phone">
+                        <span>07 68 05 19 72</span>
+                    </div>
+        
+                    <div article="bx bxs-mail">
+                        <span>hnnguyenpro@gmail.com</span>
+                    </div>
+
+                    <div article="CV-link">
+                        <button type="button">
+                            <a href="HieuCVSTAGE" > </a> CV </button>
+                    </div>
+            </div>
+    </div>
+
+        </section>
+
+    <!--PAGE PORTFOLIO-->
+    <div>
+        <section>
+            <div class="Portfolio">
+                <h3>Portfolio</h3>
+            </div>
+        </section>
+    </div>
+
+      <!--PAGE PROJECTS-->
+      <div>
+        <section>
+            <div class="Projects">
+                <h4>Projects</h4>
+            </div>
+        </section>
+
+        <section>
+            <div class="Contact">
+                <h5>Contact</h5>
+                <form action="action_page.php">
+
+                    <label for="fname"> First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name">
+                </form>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
