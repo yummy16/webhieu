@@ -252,8 +252,7 @@ img{
 span {
     line-height:40px;
     letter-spacing: 0.8px;
-    font-weight: 300;
-    font-style: italic;
+    font-weight: 200;
     color: #ffffffd0;
 }
 
@@ -263,6 +262,7 @@ span {
     width:80%;
     max-width:350px;
     justify-self: center;
+    border-radius: 10px;
 
 }
 @media(max-width:750px){
@@ -281,20 +281,28 @@ span {
 .information{
  
     margin-top: 15px;
-    
+    font-size: large;
+
 }
 .CV-links, button{
     color:rgba(255, 255, 255, 0.785);
-    background-color: #343333e0;
+    background-color: #868080e0;
     margin-top: 10px;;
     padding:10px;
     padding-left: 12px;
     padding-right: 12px;
+    border-radius: 5px;
     
 }
 button:hover{
     color:rgb(255, 255, 255);
     background-color: #9f9f9f6a;
+}
+.skills{
+    margin-left: 40%;
+}
+.skills, p{
+    color: white;
 }
 h3{
     color:white; 
@@ -309,4 +317,28 @@ h5{
     color: white;
     text-align: center;
 
+}
+.intro-dernier p{
+    margin-top: 20px;
+    color:red;
+}
+.dernier{
+    background-color: #000000;
+    color:white; 
+}
+.dernier, a{
+    list-style: none;
+    color:white;
+}
+.intro-dernier, span{
+    
+}
+.listebas{
+    list-style: none;
+}
+label{
+    display:block;
+}
+label , .fname{
+    color:white;
 }
