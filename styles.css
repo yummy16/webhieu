@@ -6,11 +6,23 @@
     padding:0;
     box-sizing:border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 html,body{
     width:100vw;
     height:100vh;
-    background: #201f1f;
+    background: #ffffffe5;   
 }
+p{
+    color: rgb(85,85,85);
+}
+/* TRANSITION*/
+a,
+.btn{
+    transition: all 300ms ease;
+}
+
 /* Navigateur*/
 nav {
     position: fixed;
@@ -227,65 +239,134 @@ img{
 }
 /*TITRE*/
 
-
-/* About */
-.about {
- 
-    padding: 50px;
-    color: #ffffffd2; 
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-
-}
-
-.about-intro{
-   color:white;
-   text-align:center;
-   margin-top: 30px;
-}
-
-.about-text, p{
-    text-align: justify;
-}
-
-
-span {
-    line-height:40px;
-    letter-spacing: 0.8px;
-    font-weight: 200;
-    color: #ffffffd0;
-}
-
-.about-img{
-
-    grid-column-start: 1;
-    width:80%;
-    max-width:350px;
-    justify-self: center;
-    border-radius: 10px;
+.section_text_p1{
+    color:rgb(222, 220, 220);
+    margin-top: 30px;
+    margin-bottom: -23px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 800;
 
 }
-@media(max-width:750px){
-    .about{
-        grid-template-columns: 1fr;
-        text-align:center;
+.AboutMe{
+    color:rgb(49, 46, 46);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+/* ABOUT SECTION */
+
+/* ABOUT SECTION */
+
+#about {
+    position: relative;
+    padding: 2rem;
+    text-align: center; /* Centre le texte pour les petits écrans */
+  }
+  
+  .section-container {
+    display: flex;
+    flex-direction: column; /* Par défaut, on aligne en colonne sur petits écrans */
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  /* Conteneur d'image */
+  .section__pic-container {
+    display: flex;
+    justify-content: center; /* Centre l'image horizontalement */
+    width: 100%;
+    margin-bottom: 2rem; /* Espacement sous l'image */
+  }
+  
+  /* Image de profil */
+  .about-pic {
+    width: 330px;
+    height: 330px;
+    border-radius: 2rem;
+    object-fit: cover; /* Conserve les proportions de l'image sans déformation */
+  }
+  
+  /* Conteneurs d'informations */
+  .about-details-container {
+    display: flex;
+    flex-direction: column; /* Dispose les éléments en colonne par défaut */
+    align-items: center; /* Centre les éléments horizontalement sur petits écrans */
+    gap: 1.5rem; /* Espacement entre les éléments */
+    margin-top: rem; /* Espacement au-dessus des conteneurs d'informations */
+  }
+  
+  .about-containers {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    justify-content: center; /* Centre les éléments horizontalement sur petits écrans */
+    gap: 2rem; /* Espacement entre les éléments */
+  }
+  
+  /* Détails de chaque conteneur */
+  .details-container {
+    padding: 1rem;
+    padding-bottom: 20px;
+    flex: 1;
+    max-width: 200px; /* Largeur maximale par défaut */
+    background: white;
+    border-radius: 2rem;
+    border: 0.1rem solid rgb(163, 163, 163);
+    text-align: center; /* Centre le texte à l'intérieur des conteneurs */
+  }
+  .details-container:hover{
+    background-color: #c3c2c2;
+  
+  }
+  /* Conteneur du texte */
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre le texte horizontalement */
+    margin-top: 1rem; 
+    text-align: left;
+
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .section-container {
+      flex-direction: row; /* Dispose les éléments en ligne pour les grands écrans */
+      justify-content: center;
     }
-    .about h2{
-        grid-column: span 1;
+  
+    .section__pic-container {
+      margin-bottom: 0; /* Enlève l'espacement sous l'image */
     }
-    .about-text,p{
-        margin-top: 30px;
+  
+    .about-details-container {
+      flex-direction: column; /* Dispose les détails en colonne */
+      align-items: center; /* Centre les éléments horizontalement */
+      gap: 2rem; /* Espacement entre les conteneurs d'informations */
     }
-}
+  
+    .about-containers {
+      flex-direction: row; /* Aligne les conteneurs horizontalement */
+      align-items: flex-start; /* Aligne les conteneurs en haut */
+      gap: 2rem; /* Espacement entre les conteneurs */
+    }
+  
+    .details-container {
+      max-width: 400px; /* Augmente la largeur maximale des conteneurs d'informations pour les grands écrans */
+      padding: 2rem; /* Augmente le padding pour les grands écrans */
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .details-container {
+      max-width: 500px; /* Augmente encore plus la largeur maximale des conteneurs d'informations pour les très grands écrans */
+      padding: 2.5rem; /* Augmente le padding pour les très grands écrans */
+    }
+  }
+  
 
-.information{
- 
-    margin-top: 15px;
-    font-size: large;
-
-}
 .CV-links, button{
-    color:rgba(255, 255, 255, 0.785);
+    color:rgba(0, 0, 0, 0.785);
     background-color: #868080e0;
     margin-top: 10px;;
     padding:10px;
@@ -302,29 +383,18 @@ button:hover{
     margin-left: 40%;
 }
 .skills, p{
-    color: white;
+    color: rgb(111, 110, 110);
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
 }
-h3{
-    color:white; 
-    text-align: center;
-    font-size: larger;
-}
-h4{
-    color:white;
-    text-align: center;
-}
-h5{
-    color: white;
-    text-align: center;
 
-}
 .intro-dernier p{
     margin-top: 20px;
     color:red;
 }
 .dernier{
     background-color: #000000;
-    color:white; 
+    color:rgb(255, 255, 255); 
 }
 .dernier, a{
     list-style: none;
