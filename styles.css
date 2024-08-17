@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 /* General*/
 *{
     margin:0;
@@ -12,11 +13,9 @@ html{
 html,body{
     width:100vw;
     height:100vh;
-    background: #ffffffe5;   
+    background: #010101e6;   
 }
-p{
-    color: rgb(85,85,85);
-}
+
 /* TRANSITION*/
 a,
 .btn{
@@ -78,14 +77,16 @@ nav ul li a:hover {
 }
 /* HIEU NGUYEN MILIEU*/
 .header {
-    position: fixed; /* Utilisez position:fixed pour le fixer à l'écran */
+    position: fixed;/* Utilisez position:fixed pour le fixer à l'écran */
     top: 50%; /* Ajustez selon vos besoins */
     left: 50%; /* Ajustez selon vos besoins */
     transform: translate(-50%, -50%); /* Centre le texte */
     color: rgb(0, 0, 0); /* Couleur du texte */
     text-align: center; /* Centrer le texte */
     width: 100%;
-    z-index: 1; /* Assurez-vous que .header est au-dessus de .hero */
+    z-index: 1; 
+    
+  
 }
 .h1{
     color:#ffffff;
@@ -99,6 +100,7 @@ nav ul li a:hover {
 }
 .h1 span{
     -webkit-text-fill-color: currentColor;
+    color:white;
 }
 .header{
     overflow:fixed;
@@ -141,6 +143,7 @@ img{
     transform: translateX(-50%);
     z-index: 10;
 }
+
 /* Couleur de fond du bouton */
 .portfolio-link {
   
@@ -151,7 +154,8 @@ img{
     border-radius: 3.5px;       /* Coins arrondis du bouton */
     border: 2px solid rgba(255, 255, 255, 0.399); 
     transition: background-color 0.3s, transform 0.3s; /* Effet de transition pour le survol */
-    display: inline-block;    /* Assure que les dimensions du bouton s'ajustent correctement */
+    display: inline-block;    
+    
 }
 /* effet souris bouton portfolio*/
 .portfolio-link:hover {
@@ -237,133 +241,187 @@ img{
     }
 
 }
+
 /*TITRE*/
 
 .section_text_p1{
     color:rgb(222, 220, 220);
-    margin-top: 30px;
-    margin-bottom: -23px;
-    text-align: center;
-    font-size: 2em;
-    font-weight: 800;
-
+    margin-top: 10%;
+    margin-left: 20%;
+    text-align: left;
+    font-size: 1.3em;
+    font-weight: 400;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
 }
 .AboutMe{
-    color:rgb(49, 46, 46);
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 3rem;
+    color:rgb(207, 207, 207);
+    text-align: left;
+    font-size: 4rem;
+    font-weight: 800;
+    font-family: "Playfair Display", serif;
+    margin-left: 20%;
+    font-style: italic;
 }
-/* ABOUT SECTION */
 
-/* ABOUT SECTION */
+.border-about{
+    margin-top: 10%;
+    margin-bottom: 15%;
+    
+}
 
+.about, span{
+    color: rgba(252, 201, 118, 0.852);
+}
+                        /* ABOUT SECTION */
 #about {
     position: relative;
     padding: 2rem;
-    text-align: center; /* Centre le texte pour les petits écrans */
-  }
-  
-  .section-container {
+    text-align: center; 
+}
+
+/* Conteneurs d'informations */
+.about-details-container {
     display: flex;
-    flex-direction: column; /* Par défaut, on aligne en colonne sur petits écrans */
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  /* Conteneur d'image */
-  .section__pic-container {
-    display: flex;
-    justify-content: center; /* Centre l'image horizontalement */
-    width: 100%;
-    margin-bottom: 2rem; /* Espacement sous l'image */
-  }
-  
-  /* Image de profil */
-  .about-pic {
-    width: 330px;
-    height: 330px;
-    border-radius: 2rem;
-    object-fit: cover; /* Conserve les proportions de l'image sans déformation */
-  }
-  
-  /* Conteneurs d'informations */
-  .about-details-container {
-    display: flex;
-    flex-direction: column; /* Dispose les éléments en colonne par défaut */
-    align-items: center; /* Centre les éléments horizontalement sur petits écrans */
-    gap: 1.5rem; /* Espacement entre les éléments */
-    margin-top: rem; /* Espacement au-dessus des conteneurs d'informations */
-  }
-  
-  .about-containers {
-    display: flex;
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
-    justify-content: center; /* Centre les éléments horizontalement sur petits écrans */
-    gap: 2rem; /* Espacement entre les éléments */
-  }
-  
-  /* Détails de chaque conteneur */
-  .details-container {
-    padding: 1rem;
-    padding-bottom: 20px;
-    flex: 1;
-    max-width: 200px; /* Largeur maximale par défaut */
-    background: white;
-    border-radius: 2rem;
-    border: 0.1rem solid rgb(163, 163, 163);
-    text-align: center; /* Centre le texte à l'intérieur des conteneurs */
-  }
-  .details-container:hover{
-    background-color: #c3c2c2;
-  
-  }
-  /* Conteneur du texte */
-  .text-container {
+    flex-direction: column; 
+    align-items: center; 
+    gap: 1.5rem; 
+    margin-top: 2rem; 
+    margin-bottom: 15%;
+}
+
+/* Conteneur du texte */
+.text-container {
+    margin-top: 1rem; 
+    margin-right: 10%;
+    text-align: justify;
+    margin-left: 20%;
+    display: inline-block;
+}
+.text-container p a{
+    background-size: 100% 100%;
+}
+@keyframes underlined{
+    from{
+        background-size:100% 100%;
+        background-position: bottom right;;
+    }
+    50%{
+        background-size: 0 100%;
+        background-position: bottom right;
+    }
+    50.01%{
+        background-size: 0 100%;
+        background-position: bottom left;
+    }
+    100%{
+        background-size: 100% 100%;
+        background-position: bottom left;
+    }
+}
+.text-container-p a:hover{
+ 
+    animation: underlined 1s both;
+}
+.text-container p, .looking-text {
+    color: rgba(255, 255, 255, 0.759);
+}
+
+.text-container-p { 
+    /*google font*/
+    font-family: "Playfair Display", serif;
+    font-weight:700;
+    font-size: medium;
+    line-height: 1.6em;
+
+}
+
+.text-container-p a{
+    
+        color:inherit;
+        text-decoration: none;
+    font-size: larger;
+    font-weight: 800;
+        background: linear-gradient(to top, #007BFF 0%, #007BFF 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+        transition: background-size .5s;
+}
+.photo-about{
+   margin-top: -53%;
+}
+
+/* Conteneur du résumé */
+.resume {
+    margin: 20px;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centre le texte horizontalement */
-    margin-top: 1rem; 
-    text-align: left;
+    align-items: flex-start;
+}
 
-  }
-  
-  /* Responsive Design */
-  @media (min-width: 768px) {
-    .section-container {
-      flex-direction: row; /* Dispose les éléments en ligne pour les grands écrans */
-      justify-content: center;
-    }
-  
-    .section__pic-container {
-      margin-bottom: 0; /* Enlève l'espacement sous l'image */
-    }
-  
+.resume-info {
+
+    font-family: "Playfair Display", serif;
+}
+
+.resume-info :hover {
+    text-decoration:line-through;
+    text-decoration-color: #208ae7;
+    
+}
+.resume-info a {
+    text-decoration: none;
+    color: inherit;
+}
+.resume-info p{
+    color: rgb(208, 206, 206);
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.5;
+
+}
+.resume-info a:hover {
+    color: #007BFF; /* Change to your desired hover color */
+}
+
+.resume-info p {
+    margin: 0;
+}
+.resume-item {
+    display: flex;
+    align-items: center; /* Vertically align the icon and text */
+    gap: 10px; 
+    margin-bottom: 20px;
+
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+
     .about-details-container {
-      flex-direction: column; /* Dispose les détails en colonne */
-      align-items: center; /* Centre les éléments horizontalement */
-      gap: 2rem; /* Espacement entre les conteneurs d'informations */
+        flex-direction: row; /* Dispose les éléments en ligne pour les grands écrans */
+        justify-content: space-between;
+        align-items: flex-start;
     }
-  
-    .about-containers {
-      flex-direction: row; /* Aligne les conteneurs horizontalement */
-      align-items: flex-start; /* Aligne les conteneurs en haut */
-      gap: 2rem; /* Espacement entre les conteneurs */
+
+    .text-container {
+        flex: 1; /* Permet au conteneur de texte de prendre toute la largeur disponible */
+        margin-right: 20px; /* Espacement entre le texte et le résumé */
     }
-  
-    .details-container {
-      max-width: 400px; /* Augmente la largeur maximale des conteneurs d'informations pour les grands écrans */
-      padding: 2rem; /* Augmente le padding pour les grands écrans */
+
+    .resume {
+        flex: 0 0 300px; /* Fixed width for resume */
+        align-self: center; /* Center align self */
+        margin-right: 10%; /* Margin right to adjust positioning */
     }
-  }
-  
-  @media (min-width: 1200px) {
-    .details-container {
-      max-width: 500px; /* Augmente encore plus la largeur maximale des conteneurs d'informations pour les très grands écrans */
-      padding: 2.5rem; /* Augmente le padding pour les très grands écrans */
+}
+
+
+@media (min-width: 1200px) {
+    .text-container, .resume {
+        max-width: 500px; /* Augmente la largeur maximale pour les très grands écrans */
     }
-  }
-  
+}
+
 
 .CV-links, button{
     color:rgba(0, 0, 0, 0.785);
@@ -379,11 +437,9 @@ button:hover{
     color:rgb(255, 255, 255);
     background-color: #9f9f9f6a;
 }
-.skills{
-    margin-left: 40%;
-}
+
 .skills, p{
-    color: rgb(111, 110, 110);
+    color: rgba(10, 9, 9, 0.76);
     font-family: "Poppins", sans-serif;
     font-weight: 300;
 }
@@ -400,9 +456,7 @@ button:hover{
     list-style: none;
     color:white;
 }
-.intro-dernier, span{
-    
-}
+
 .listebas{
     list-style: none;
 }
@@ -411,4 +465,645 @@ label{
 }
 label , .fname{
     color:white;
+}
+                /* SKILL SECTION*/
+.titreskills{
+    font-size: 2.5em;
+    font-weight: 800;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.884);
+    font-family: "Playfair Display", serif;
+
+}
+.whop, .skill, .projects{
+    margin-top: -30px;
+    font-size: 3em;
+    font-weight: 900;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    margin-left: -24rem;
+}
+
+
+.skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background: none;
+}
+.skills-container {
+    display: flex;
+    align-items: flex-start;
+    background-color: #211f1fce;
+    gap:20%;
+}
+.skill-title{
+
+    color:rgba(0, 0, 0, 0.841);
+    font-size: 2em;
+    font-weight: 800;
+}
+.skill-list{
+    list-style: none;
+}
+.fleur-photo{
+   
+    width:50%;
+    height:50%;
+}
+
+/* #### SKILLS PAGE #### */
+
+.item , span{
+    color:white;
+    font-family: "Playfair Display", serif;
+}
+.titreskills{
+    grid:1;
+    position:absolute;
+    text-align: left;
+    margin-top: 20%;
+    margin-left: 10%;
+    font-size: 4.5em;
+    font-size: 400;
+    color: rgba(255, 255, 255, 0.852);
+}
+
+.skills{
+    padding: 5rem 0 2.5rem 0;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+.row-1{
+
+    max-width: 30%;
+    margin-left: 80%;
+}
+.row-2{
+    max-width: 20%;
+    margin-left:40%;
+}
+
+
+.skills > .text{
+    width: 70%;
+    margin: 1.5rem auto;
+    text-align: center;
+}
+.skills .row{
+    margin: 1rem 0;
+}
+.skills .item{
+    padding: 0.5rem 0;
+    margin: 0.3rem 0;
+}
+.skills .item-text{
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 600;
+    font-size: 1.3rem;
+    position: relative;
+}
+
+.skills .item-text .w-90 {
+    margin-left: 60%;
+}
+
+.skills .item-text .w-70 {
+    margin-left: 80%;
+}
+
+.skills .item-text .w-50 {
+    margin-left: 95%;
+}
+
+.skills .item-text .w-80 {
+    margin-left: 75%;
+}
+
+.skills .item-text .w-30 {
+    margin-left: 75%;
+}
+.skills .item-text .w-40 {
+    margin-left: 75%;
+}
+
+/* colonne 2*/
+
+.skills .item-text .w-55 {
+    margin-left: 45%;
+}
+.skills .item-text .w-45 {
+    margin-left: 85%;
+}
+.skills .item-text .w-401 {
+    margin-left: 60%;
+}
+.skills .item-text .w-701 {
+    margin-left: 70%;
+}
+.skills .item-text .w-601 {
+    margin-left: 40%;
+}
+.skills .item-text .w-65 {
+    margin-left: 40%;
+}
+
+@media (max-width: 850px) {
+    .skills .item-text span:last-child {
+        position: absolute;
+    }
+
+   
+.skills .item-text .w-90 {
+    margin-left: 60%;
+}
+
+.skills .item-text .w-70 {
+    margin-left: 80%;
+}
+
+.skills .item-text .w-50 {
+    margin-left: 95%;
+}
+
+.skills .item-text .w-80 {
+    margin-left: 75%;
+}
+
+.skills .item-text .w-30 {
+    margin-left: 75%;
+}
+.skills .item-text .w-40 {
+    margin-left: 75%;
+}
+
+/* colonne 2*/
+
+.skills .item-text .w-55 {
+    margin-left: 40%;
+}
+.skills .item-text .w-45 {
+    margin-left: 85%;
+}
+.skills .item-text .w-401 {
+    margin-left: 60%;
+}
+.skills .item-text .w-701 {
+    margin-left: 70%;
+}
+.skills .item-text .w-601 {
+    margin-left: 40%;
+}
+.skills .item-text .w-65 {
+    margin-left: 40%;
+}
+
+}
+
+@media(max-width: 765px) {
+
+    .titreskills {
+        position: absolute;
+        margin-top: 10%;
+        margin-left: 20%;
+        font-size: 4em;
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.852);
+    }
+    
+    .skills {
+        padding: 5rem 0 2.5rem 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px; /* Espace entre les colonnes */
+    }
+    
+    .row-1, .row-2 {
+        margin-top: 45%;
+    }
+    
+    .row-1 {
+        max-width: 50%;
+        margin-left: 25%;
+    }
+    
+    .row-2 {
+        max-width: 50%;
+        margin-left: 0.5%;
+    }
+
+    .skills .item-text {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .skills .item-text{
+        display: flex;
+        flex-direction:column;
+        position: relative;
+    }
+
+    .skills .item-text .w-55 {
+        margin-left: 90%;
+    }
+    .skills .item-text .w-45 {
+        margin-left: 90%;
+    }
+    .skills .item-text .w-401 {
+        margin-left: 88%;
+    }
+    .skills .item-text .w-601 {
+        margin-left: 90%;
+    }
+    .skills .item-text .w-701 {
+        margin-left: 92%;
+    }
+    .skills .item-text .w-65{
+        margin-left: 93%;
+    }
+}
+
+@media(max-width: 500px) {
+
+    .titreskills {
+        position: absolute;
+        text-align: center;
+        margin-top: 10%;
+        margin-left: 20%;
+        font-size: 4em;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.852);
+    }
+    
+    .skills {
+        padding: 5rem 0 2.5rem 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px; /* Espace entre les colonnes */
+    }
+    
+    .row-1, .row-2 {
+        margin-top: 45%;
+    }
+    
+    .row-1 {
+        max-width: 45%;
+        margin-left: 35%;
+    }
+    
+    .row-2 {
+        max-width: 45%;
+        margin-left: 0.5%;
+    }
+    
+.skills .item-text .w-90 {
+    margin-left: 90%;
+}
+
+.skills .item-text .w-70 {
+    margin-left: 90%;
+}
+
+.skills .item-text .w-50 {
+    margin-left: 90%;
+}
+
+.skills .item-text .w-80 {
+    margin-left: 90%;
+}
+
+.skills .item-text .w-30 {
+    margin-left: 90%;
+}
+.skills .item-text .w-40 {
+    margin-left: 90%;
+}
+
+/* colonne 2*/
+
+.skills .item-text .w-55 {
+    margin-left: 110%;
+}
+.skills .item-text .w-45 {
+    margin-left: 110%;
+}
+.skills .item-text .w-401 {
+    margin-left: 110%;
+}
+.skills .item-text .w-701 {
+    margin-left: 110%;
+}
+.skills .item-text .w-601 {
+    margin-left: 110%;
+}
+.skills .item-text .w-65 {
+    margin-left: 110%;
+}
+
+}
+
+/* Styles pour la barre de progression */
+.progress {
+    margin: 0.8rem 0;
+    border-radius: 10px;
+    height: 5px;
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: rgba(252, 201, 118, 0.852);
+    height: 100%;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.progress-bar.w-90 {
+    width: 90%;
+}
+
+.progress-bar.w-70 {
+    width: 70%;
+}
+
+.progress-bar.w-50 {
+    width: 45%;
+}
+
+.progress-bar.w-80 {
+    width: 80%;
+}
+
+.progress-bar.w-30 {
+    width: 60%;
+}
+
+.progress-bar.w-40 {
+    width: 40%;
+}
+
+.progress-bar.w-65 {
+    width: 65%;
+}
+
+.progress-bar.w-60 {
+    width: 60%;
+}
+.progress-bar.w-45 {
+    width: 45%;
+}
+.progress-bar.w-55 {
+    width: 55%;
+}
+
+
+
+                                /* PROJECT PAGE*/
+h4{
+    color: rgba(255, 255, 255, 0.852);
+    display: flex;
+    justify-content: center;
+    font-size: 5.2em;
+    margin-bottom: 10%;
+}
+
+
+                             /* CONTACT PAGE*/
+.contact , h6 {
+    color:white;
+    font-weight: 800;
+    font-size: 8em;
+
+}
+.Contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    
+}
+
+.Contact h6 {
+    flex: 1; /* prend l'espace nécessaire à gauche */
+    margin-left: 12%; /* espace entre le texte et le formulaire */
+    text-align: left; 
+    
+}
+
+.contactForm {
+    flex: 2; /* prend plus d'espace à droite */
+    max-width: 600px; 
+   
+}
+
+.contact .contactForm{
+
+    position: relative;
+    width:40%;
+
+}
+
+.Contact .contactForm form{
+    position: relative;
+    z-index:10;
+}
+
+.inputRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes de taille égale */
+    gap: 20px; /* Espace entre les colonnes */
+}
+
+.inputBox input {
+    width: 100%; /* Le champ de saisie remplit toute la largeur de son conteneur */
+}
+
+.Contact .contactForm form .inputBox {
+    position: relative;
+    width:100%;
+    margin-top: 20px;
+}
+
+.Contact .contactForm form .inputBox input,
+.Contact .contactForm form .inputBox textarea{
+    width:100%;
+    padding:5px 0;
+    font-size: 1.1em ;
+    margin: 10px 0;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid   #696969;
+    border-radius: 2px ;
+    color:white;
+    outline:none;
+    resize: none;
+}
+
+/* flèche envoie du formulaire */
+
+/* Positionnement du bouton d'envoi dans le formulaire de contact */
+.Contact .contactForm form .inputBox-send {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+  }
+  
+  /* Style de la boîte contenant le bouton et l'icône */
+  .inputBox-send {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style du bouton de soumission */
+  .inputBox-send input[type="submit"] {
+    border: none;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+                        /* Effet hover pour le bouton */
+
+
+  .inputBox-send input[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Zoom léger au survol */
+  }
+  
+  /* Style du conteneur de l'icône */
+  .inputBox-send span {
+    display: inline-flex;
+    margin-left: 8px; /* Espace entre le texte "Send" et l'icône */
+  }
+  
+  /* Style de l'icône SVG */
+  .inputBox-send svg {
+    width: 20px;
+    height: 20px;
+    fill: white; /* Couleur de l'icône identique à celle du texte */
+    transition: transform 0.3s ease; /* Transition pour l'animation de l'icône */
+  }
+  
+  /* Effet hover pour l'icône */
+  .inputBox-send input[type="submit"]:hover svg {
+    transform: translateX(4px); /* Déplacement léger de l'icône au survol */
+  }
+  
+  /* Style du champ de saisie dans le formulaire */
+  .Contact .contactForm form .inputBox-send input {
+    width: 10%;
+    padding: 5px 1px;
+    font-size: 1em;
+    background: transparent;
+    border: none;
+    margin: 10px 0;
+    border-bottom: 1px solid #696969;
+    border-radius: 2px;
+    color: white;
+    text-align: left;
+    transition: width 0.3s ease, font-size 0.3s ease, color 0.3s ease; /* Ajout de la transition */
+  }
+  
+  /* Effet hover pour le champ de saisie */
+  .Contact .contactForm form .inputBox-send input:hover {
+    color: rgba(252, 201, 118, 0.852);
+    font-size: larger;
+    width: 15%;
+  }
+  
+  /* Style des labels associés aux champs de saisie */
+  .Contact .contactForm form .inputBox span {
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    padding: 5px 0;
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: white;
+    transition: 0.5s;
+  }
+  
+/*  */
+.Contact .contactForm form .inputBox input:focus ~ span,
+.Contact .contactForm form .inputBox textarea:focus ~ span,
+.Contact .contactForm form .inputBox input:valid ~ span,
+.Contact .contactForm form .inputBox textarea:valid ~ span{
+  
+    color: rgba(252, 201, 118, 0.852);
+    font-size: 0.9em;
+    transform: translateY(-24px);
+}
+.icon-contact{
+   display: flex;
+   justify-content: space-around;
+    align-items:center;
+    margin-top: 25%;
+    
+}
+.dernier{
+    background-color: #211f1fce;
+    margin-left:  2%;
+    font-size: small;
+    
+}
+
+/* Adaptation du formulaire de contact pour les petits écrans */
+@media (max-width: 768px) {
+    .Contact {
+        grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
+    }
+    
+    .Contact h6 {
+        margin-left: 0;
+        text-align: left;
+        margin-bottom: 20px; 
+        font-weight: 600;
+        font-size: 5.2em; 
+        margin: 10%;
+    }
+    
+    .contactForm {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .Contact .contactForm form .inputBox-send input{
+
+        width:13%;
+        padding:5px 1px;
+        
+    }
+
+     /* Style de l'icône SVG */
+  .inputBox-send svg {
+    width: 16px;
+    height: 16px;
+    fill: white; /* Couleur de l'icône identique à celle du texte */
+    transition: transform 0.3s ease; /* Transition pour l'animation de l'icône */
+  }
+}
+
+/* FOOTER*/
+.dernier-section{
+    display: flex;
+    justify-content: space-between;
+}
+.dernier-section p{
+    color: white;
+    font-weight: 800;
+    font-size: large;
+}
+/* PROJECT SECTION*/
+.project-container{
+    display:flex;
 }
