@@ -73,7 +73,9 @@ nav ul li a {
 }
 /*effet souris liste*/
 nav ul li a:hover {
-    color: #000000; /* Couleur du texte au survol */
+    
+
+    color: rgba(252, 201, 118, 0.852);  /* Couleur du texte au survol */
 }
 /* HIEU NGUYEN MILIEU*/
 .header {
@@ -142,7 +144,9 @@ img{
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
+    
 }
+
 
 /* Couleur de fond du bouton */
 .portfolio-link {
@@ -184,7 +188,8 @@ img{
         font-weight: 1px;
         font-style: normal;
         text-align: center;
-        
+        justify-content: space-between;
+        margin-top: 20%;
     }
     .entete{
         width:10%;
@@ -194,9 +199,12 @@ img{
 /* BARRE NAV TELEPHONE*/
 @media screen and (max-width:435px){
     nav ul {
-        justify-content: center;
+        justify-content: space-around;
         margin:4px;
         width:100%;
+        font-size: 1.07em;
+        font-weight: 800;
+        
     }
     .entete{
         display: none;
@@ -226,7 +234,7 @@ img{
     .header{
         display:flex;
         flex-direction: column;
-        position: relative;
+        position: absolute;
         padding-bottom: 80px;
         z-index: 1;
     }
@@ -238,6 +246,7 @@ img{
   
         border-radius: 3.5px;     
         border: 1px solid rgba(255, 255, 255, 0.399); 
+        
     }
 
 }
@@ -443,7 +452,9 @@ button:hover{
     font-family: "Poppins", sans-serif;
     font-weight: 300;
 }
-
+.row-1{
+    margin-left: 5%;
+}
 .intro-dernier p{
     margin-top: 20px;
     color:red;
@@ -468,6 +479,7 @@ label , .fname{
 }
                 /* SKILL SECTION*/
 .titreskills{
+    
     font-size: 2.5em;
     font-weight: 800;
     text-align: center;
@@ -575,7 +587,7 @@ label , .fname{
 }
 
 .skills .item-text .w-50 {
-    margin-left: 95%;
+    margin-left: 80%;
 }
 
 .skills .item-text .w-80 {
@@ -586,7 +598,7 @@ label , .fname{
     margin-left: 75%;
 }
 .skills .item-text .w-40 {
-    margin-left: 75%;
+    margin-left: 95%;
 }
 
 /* colonne 2*/
@@ -726,7 +738,7 @@ label , .fname{
     }
 }
 
-@media(max-width: 500px) {
+@media(max-width: 680px) {
 
     .titreskills {
         position: absolute;
@@ -864,19 +876,24 @@ label , .fname{
 
                                 /* PROJECT PAGE*/
 h4{
-    color: rgba(255, 255, 255, 0.852);
-    display: flex;
-    justify-content: center;
-    font-size: 5.2em;
-    margin-bottom: 10%;
+    color: rgb(207, 207, 207);
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 800;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    margin-top: 7%;
 }
-
 
                              /* CONTACT PAGE*/
 .contact , h6 {
     color:white;
     font-weight: 800;
+    font-style: normal;
     font-size: 8em;
+    font-family: "Playfair Display", serif;
+    text-decoration: none;
+
 
 }
 .Contact {
@@ -891,7 +908,7 @@ h4{
     flex: 1; /* prend l'espace nécessaire à gauche */
     margin-left: 12%; /* espace entre le texte et le formulaire */
     text-align: left; 
-    
+    text-decoration: none;
 }
 
 .contactForm {
@@ -1093,6 +1110,28 @@ h4{
   }
 }
 
+/*===== CLASS CSS ===== */
+.section{
+    padding: 3rem 0;
+}
+.section-title{
+    position: relative;
+    font-size: var(--h2-font-size);
+    color: var(--dark-color);
+    margin: var(--mb-4) 0;
+    text-align: center;
+}
+.section-title::after{
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: .18rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 2rem;
+}
+
 /* FOOTER*/
 .dernier-section{
     display: flex;
@@ -1103,7 +1142,59 @@ h4{
     font-weight: 800;
     font-size: large;
 }
-/* PROJECT SECTION*/
-.project-container{
-    display:flex;
-}
+
+/* Notion*/
+#projects-notion {
+    position: relative;
+    width: 100%; /* Ajustez selon vos besoins */
+    max-width: 600px; /* Taille maximale */
+    margin: 0 auto; /* Centre l'élément */
+  }
+  
+  .notion {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  
+  .notion img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Ajoute des effets pour l'image */
+  }
+  
+  .text-notion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Assure que le texte est blanc */
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0; /* Caché initialement */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)); /* Dégradé couvrant */
+    transition: opacity 0.3s ease;
+    z-index: 1; /* Assure que le texte est au-dessus de l'image */
+  }
+  
+  #projects-notion:hover .notion img {
+    transform: scale(1.05); /* Zoom sur survol */
+    opacity: 0.5; /* Image plus sombre */
+  }
+  
+  #projects-notion:hover .text-notion {
+    opacity: 1; /* Texte visible sur survol */
+    color: white; /* Forcer le blanc en cas de surcharge */
+  }
+  .underlined {
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.852); /* Couleur du soulignement */
+    text-decoration-thickness: 1.5px; /* Épaisseur du soulignement */
+  }
+  
