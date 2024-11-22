@@ -1144,7 +1144,7 @@ h4{
 }
 
 /* Notion*/
-#projects-notion {
+.projects-notion {
     position: relative;
     width: 100%; /* Ajustez selon vos besoins */
     max-width: 600px; /* Taille maximale */
