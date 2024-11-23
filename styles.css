@@ -1144,28 +1144,26 @@ h4{
 }
 
 /* Notion*/
-.projects-notion {
+/* Conteneur général */
+.notion {
     position: relative;
     width: 100%; /* Ajustez selon vos besoins */
-    max-width: 600px; /* Taille maximale */
-    margin: 0 auto; /* Centre l'élément */
-  }
-  
-  .notion {
-    position: relative;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-  }
-  
-  .notion img {
+    max-width: 600px;
+    margin: 0 auto; /* Centrer l'élément */
+    overflow: hidden; /* Évite que le contenu dépasse */
+    cursor: pointer; /* Ajoute un curseur de type "main" */
+}
+
+/* Image */
+.notion img {
     display: block;
     width: 100%;
     height: auto;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Ajoute des effets pour l'image */
-  }
-  
-  .text-notion {
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Effets fluides */
+}
+
+/* Texte caché par défaut */
+.text-notion {
     position: absolute;
     top: 0;
     left: 0;
@@ -1174,27 +1172,29 @@ h4{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white; /* Assure que le texte est blanc */
+    color: white; /* Couleur du texte */
     font-size: 1.5rem;
     font-weight: bold;
-    opacity: 0; /* Caché initialement */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)); /* Dégradé couvrant */
-    transition: opacity 0.3s ease;
+    opacity: 0; /* Texte caché initialement */
+    background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent noir */
+    transition: opacity 0.3s ease-in-out; /* Transition fluide */
     z-index: 1; /* Assure que le texte est au-dessus de l'image */
-  }
-  
-  #projects-notion:hover .notion img {
-    transform: scale(1.05); /* Zoom sur survol */
-    opacity: 0.5; /* Image plus sombre */
-  }
-  
-  #projects-notion:hover .text-notion {
-    opacity: 1; /* Texte visible sur survol */
-    color: white; /* Forcer le blanc en cas de surcharge */
-  }
-  .underlined {
-    text-decoration: underline;
-    text-decoration-color: rgba(255, 255, 255, 0.852); /* Couleur du soulignement */
-    text-decoration-thickness: 1.5px; /* Épaisseur du soulignement */
-  }
-  
+}
+
+/* État survol */
+.notion:hover img {
+    transform: scale(1.05); /* Zoom léger sur l'image */
+    opacity: 0.5; /* Rendre l'image plus sombre */
+}
+
+.notion:hover .text-notion {
+    opacity: 1; /* Affiche le texte sur survol */
+}
+.text-notion {
+    transform: translateY(20px); /* Position initiale légèrement en bas */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.notion:hover .text-notion {
+    transform: translateY(0); /* Revient à sa position normale */
+}
